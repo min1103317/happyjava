@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Selectors</title>
+    <style>
+      ul ~ p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <p>test</p>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>
+            3
+            <p>ul ul li p</p>
+          </li>
+        </ul>
+      </ul>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor.
+      </p>
+      <p>두번째 형제</p>
+      <p>세변째 형제</p>
+    </div>
+  </body>
+</html>
