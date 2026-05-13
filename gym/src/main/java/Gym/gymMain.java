@@ -71,6 +71,6 @@ public class gymMain {
         }
 
         System.out.println("시스템을 종료합니다");
-
+        sc.close();
     }
 }

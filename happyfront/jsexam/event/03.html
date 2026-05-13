@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="1-11.html" id = "joinForm">
+        이름 : <input type = "text" name = "name"/> <br/>
+        비밀번호 : <input type = "password" name="password"/> <br/>
+        비멀번호 확인 : <input type="password" name="passwordcheck"/> <br />
+        <input type="submit" value="등록" />
+
+    </form>
+
+    <script>
+        const join = document.getElementById("joinForm");
+
+        join.addEventListener("submit" , (e) => {
+            const[id,pw,chpw] = document.querySelectorAll('input');
+
+            if(id.value === "") {
+                alert("아이디를 입력하세요");
+                id.focus();
+            }else
+            if(pw.value === "") {
+                alert("비밀번호를 입력하세요");
+                pw.focus();
+            }else
+            if(chpw.value === "") {
+                alert("비밀번호 확인을 입력하세요");
+                chpw.focus();
+            }else
+            if(pw.value != chpw.value) {
+                alert("비밀번호와 확인 비밀번호가 다릅니다");
+            }
+            
+            else {
+                alert("회원가입 성공");
+                return;
+            }
+
+            e.preventDefault();
+
+        })
+    </script>
+    
+</body>
+</html>
